@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta chartest="utf-8">
+    <title>document</title>
+    <style>
+      body {
+  font-family: system-ui;
+  background: white;
+  color: black;
+  text-align: center;
+}
+
+.alert-box{
+  background: #aba8fa;
+  color: blue;
+  padding: 30px;
+  width: 50px;
+  border-radius: 5px;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+    </style>
+  </head>
+  <body>
+    
+    <div class="alert-box" id="alert">Alert box</div>
+    <button onclick="close_re()">버튼</button>
+    
+    <button onclick="open_re('none')">close</button>
+    <br><br>
+    <input type="file">
+    <script>
+      function close_re(){
+        document.getElementById('alert').style.display = 'block';}
+      
+      function open_re(hole){
+        document.getElementById('alert').style.display = hole;}
+
+    </script>
+</html>
