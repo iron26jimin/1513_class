@@ -1,41 +1,120 @@
-<html>
-  <head>
-    <meta chartest="utf-8">
-    <title>document</title>
-    <style>
-      body {
-  font-family: system-ui;
-  background: white;
-  color: black;
-  text-align: center;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1학년 5반 학습 보조</title>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>1-5</h1>
+            <p>공지판</p>
+        </header>
+
+        <div class="menu-grid">
+            <a href="calendar.html" class="menu-card color-1">
+                <div class="icon">📅</div>
+                <div class="text">
+                    <h3>수행평가 일정</h3>
+                    <p>이번 주 일정을 확인해요</p>
+                </div>
+            </a>
+
+            <a href="upload.html" class="menu-card color-2">
+                <div class="icon">📤</div>
+                <div class="text">
+                    <h3>파일 올리기</h3>
+                    <p>과제물을 제출하세요</p>
+                </div>
+            </a>
+
+            <a href="download.html" class="menu-card color-3">
+                <div class="icon">📥</div>
+                <div class="text">
+                    <h3>파일 받기</h3>
+                    <p>학습 자료 다운로드</p>
+                </div>
+            </a>
+
+            <a href="notice.html" class="menu-card color-4">
+                <div class="icon">🍱</div>
+                <div class="text">
+                    <h3>급식 & 공지</h3>
+                    <p>오늘 뭐 나오지?</p>
+                </div>
+            </a>
+        </div>
+    </div>
+  <style>
+    * {
+    box-sizing: border-box;
+    font-family: 'Pretendard', sans-serif;
 }
 
-.alert-box{
-  background: #aba8fa;
-  color: blue;
-  padding: 30px;
-  width: 50px;
-  border-radius: 5px;
-  display: none;
-  margin-left: auto;
-  margin-right: auto;
+body {
+    background-color: #f0f2f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
-    </style>
-  </head>
-  <body>
-    
-    <div class="alert-box" id="alert">Alert box</div>
-    <button onclick="close_re()">버튼</button>
-    
-    <button onclick="open_re('none')">close</button>
-    <br><br>
-    <input type="file">
-    <script>
-      function close_re(){
-        document.getElementById('alert').style.display = 'block';}
-      
-      function open_re(hole){
-        document.getElementById('alert').style.display = hole;}
 
-    </script>
+.container {
+    width: 100%;
+    max-width: 500px; /* 폰에서 보기 딱 좋은 너비 */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 { color: #333; margin-bottom: 5px; }
+header p { color: #777; margin: 0; }
+
+.menu-grid {
+    display: grid;
+    gap: 15px; /* 카드 사이 간격 */
+}
+
+/* 카드 기본 스타일 */
+.menu-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-card:active {
+    transform: scale(0.98); /* 눌렀을 때 쏙 들어가는 효과 */
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-right: 20px;
+}
+
+.text h3 { margin: 0; font-size: 1.1rem; }
+.text p { margin: 5px 0 0; font-size: 0.85rem; color: #888; }
+
+/* 카드별 포인트 컬러 */
+.color-1 { border-left: 6px solid #4e73df; }
+.color-2 { border-left: 6px solid #1cc88a; }
+.color-3 { border-left: 6px solid #36b9cc; }
+.color-4 { border-left: 6px solid #f6c23e; }
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #bbb;
+}
+  </style>
+
+</body>
 </html>
